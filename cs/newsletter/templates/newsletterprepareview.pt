@@ -1,0 +1,95 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="cs.donedukia">
+<head></head>
+<body>
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <div tal:content="context/text/output|nothing">
+        </div>
+
+        <form action="" method="post"
+          tal:attributes="action string:${context/absolute_url}/${view/__name__}">
+          <h2>Aukeratu boletinean txertatu beharreko albiste eta hitzorduak</h2>
+
+          <h3>Albisteak</h3>
+          <table class="listing">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Izenburua</th>
+                <th>Data</th>
+                <th>Lurraldeak</th>
+                <th>Proiektuak</th>
+              </tr>
+            </thead>
+            <tbody tal:define="DateTime python:modules['DateTime'];
+                               toLocalizedTime nocall:here/@@plone/toLocalizedTime
+                      ">
+              <tr tal:repeat="newsitem view/get_newsitems">
+                <td>
+                  <input type="checkbox"
+                      name="newsitems:list"
+                      tal:attributes="value newsitem/getId;
+                                      checked python:(DateTime.DateTime() < DateTime.DateTime(newsitem.EffectiveDate()) + 7) and 'checked' or None
+                                  "/>
+                </td>
+                <td>
+                  <a href="" tal:attributes="href newsitem/getURL"
+                    tal:content="newsitem/Title">
+                    Izenburua
+                  </a>
+                </td>
+                <td>
+                  <span tal:replace="python:toLocalizedTime(newsitem.EffectiveDate())" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Hitzorduak</h3>
+          <table class="listing">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Izenburua</th>
+                <!-- <th>Motiboa</th>
+                <th>Herria</th> -->
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="event view/get_events">
+                <td>
+                  <input type="checkbox" name="events:list"
+                      tal:attributes="value event/link"/>
+                </td>
+                <td>
+                  <a href="" tal:attributes="href event/link"
+                    tal:content="event/title">
+                    Title
+                  </a>
+                </td>
+                <!--<td>
+                    <span tal:replace="event/bertso_motiboa">
+                      Motiboa
+                    </span>
+                </td>
+                <td>
+                    <span tal:replace="event/bertso_location">
+                      Location
+                    </span>
+                </td>-->
+              </tr>
+            </tbody>
+          </table>
+          <button type="submit" name="prestatu">Prestatu boletina</button>
+        </form>
+
+    </metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

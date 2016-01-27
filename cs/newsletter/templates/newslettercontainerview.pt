@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="cs.donedukia">
+<head></head>
+<body>
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <div tal:content="structure context/text/output|nothing">
+        </div>
+
+        <h2>Bidalitako buletinak</h2>
+        <ul tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+          <tal:buletin tal:repeat="buletin view/get_bulletins">
+            <li>
+              <a href=""
+                tal:attributes="href bulletin/getURL">
+
+                <span class="title"
+                  tal:content="bulletin/Title">
+                  Maiatza
+                </span>
+                <span class="date"
+                  tal:content="python:toLocalizedTime(bulletin.EffectiveDate)">
+                  2013/05/06
+                </span>
+              </a>
+            </li>
+
+          </tal:buletin>
+
+        </ul>
+
+    </metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

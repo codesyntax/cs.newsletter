@@ -1,0 +1,17 @@
+cs.newsletter Installation
+--------------------------
+
+To install cs.newsletter using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``cs.newsletter`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        cs.newsletter
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout

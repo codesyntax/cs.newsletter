@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="cs.donedukia">
+<head></head>
+<body>
+<metal:content-core fill-slot="main">
+  <h1 class="documentFirstHeading">
+    Buletinaren bidalketa
+  </h1>
+
+  <form action="" tal:attributes="action string:${context/absolute_url}/${view/__name__}"
+      class="form-horizontal"
+      method="post">
+      <legend>
+        Buletina bidaltzeko, bete formulario hau.
+      </legend>
+      <div class="control-group">
+        <label class="control-label" for="to">Jasotzailea</label>
+        <div class="controls">
+          <input type="email" name="to" id="to" value="libargutxi@gmail.com" />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="fr">Bidaltzailea</label>
+        <div class="controls">
+          <input type="email" name="fr" id="fr" value="libargutxi@gmail.com" />
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="subject">Buletinaren gaia (e-mailaren "asunto"-a)</label>
+        <div class="controls">
+          <input type="text" name="subject" id="subject"
+              class="input-xxlarge"
+              size="50"
+              tal:define="DateTime modules/DateTime"
+              tal:attributes="value python:'Mintzola Elkartearen Buletina - %s' % DateTime.DateTime().strftime('%Y-%m-%d')"
+        />
+        </div>
+      </div>
+      <div class="control-group">
+        <button type="submit">Bidali</button>
+      </div>
+
+  </form>
+
+
+</metal:content-core>
+
+</body>
+</html>

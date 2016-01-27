@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bertsozale elkartearen boletina</title>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    a:hover {
+        text-decoration: underline !important;
+    }
+    td.promocell p {
+        color:#e4e4e4;
+        font-size:16px;
+        line-height:26px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top:0;
+        margin-bottom:0;
+        padding-top:0;
+        padding-bottom:0px;
+        font-weight:normal;
+    }
+    td.contentblock h4 {
+        color:#C54815 !important;
+        font-size:16px;
+        line-height:24px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top:0;
+        margin-bottom:10px;
+        padding-top:0;
+        padding-bottom:0;
+        font-weight:normal;
+    }
+    td.contentblock h4 a {
+        color: #C54815;
+        text-decoration:none;
+    }
+    td.contentblock p {
+        color:#333;
+        font-size:14px;
+        line-height:19px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top:0;
+        margin-bottom:12px;
+        padding-top:0;
+        padding-bottom:0;
+        font-weight:normal;
+    }
+    td.contentblock p a {
+        color:#C54815;
+        text-decoration:none;
+    }
+
+    p.more {
+        font-size: 11px !important;
+    }
+
+    p.place{
+        text-transform: uppercase;
+        font-weight: bold !important;
+    }
+
+    .agendaevent p, .agendaevent h4 {
+        margin:0 !important;
+    }
+
+    @media only screen and (max-device-width: 480px) {
+       div[class="header"] {
+          font-size: 16px !important;
+      }
+      table[class="table"], td[class="cell"] {
+          width: 300px !important;
+      }
+      table[class="promotable"], td[class="promocell"] {
+          width: 325px !important;
+      }
+      td[class="footershow"] {
+          width: 300px !important;
+      }
+      table[class="hide"], img[class="hide"], td[class="hide"] {
+          display: none !important;
+      }
+      img[class="divider"] {
+          height: 1px !important;
+      }
+      td[class="logocell"] {
+        padding-top: 15px !important;
+        padding-left: 15px !important;
+        width: 300px !important;
+    }
+    img[id="screenshot"] {
+      width: 325px !important;
+      height: 127px !important;
+  }
+}
+img[class="galleryimage"] {
+  width: 53px !important;
+  height: 53px !important;
+}
+p[class="reminder"] {
+    font-size: 11px !important;
+}
+
+
+h4[class="secondary"] {
+    line-height: 22px !important;
+    margin-bottom: 5px !important;
+    font-size: 18px !important;
+}
+}
+</style>
+</head>
+<body topmargin="0" leftmargin="0" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#e4e4e4;-webkit-text-size-adjust:none;" bgcolor="#e4e4e4" marginheight="0" marginwidth="0">
+
+
+
+    <table bgcolor="#e4e4e4" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+            <td bgcolor="#e4e4e4" width="100%">
+
+                <table class="table" align="center" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="600">
+                    <tbody><tr>
+                        <td class="cell" width="600">
+
+
+                            <a href="http://www.bertsozale.eus/">
+                                <img border="0" src="http://www.bertsozale.eus/logo2.png" label="Hero image" editable="true" width="600" height="150" id="screenshot">
+                            </a>
+
+                            <table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
+                                <tr>
+                                    <td height="60" align="center" width="100%" class="hide" style="color:#a6a6a6;font-size:12px;font-family: Arial, Helvetica, sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#fff"><span>Bertsozale Elkartearen boletina</span><br /><strong><span style="text-transform:uppercase;" tal:content="options/date"> Data </span></strong>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                                <tr>
+                                    <td bgcolor="#fff" widht="25" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="20" height="20"></td>
+                                    <td style="color: #666; background:#e4e4e4; border-radius: 0 0 5px 5px; background-color: #e5e1e0; border-top: 1px solid #888" class="logocell" align="center" bgcolor="#fff" height="30" width="180">
+                                        <a href="http://www.bertsozale.eus/eu/albisteak" style="color: #C54815; text-decoration: none;"><strong>Albisteak</strong></a></td>
+                                    <td bgcolor="#fff" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="400" height="1"></td>
+
+                                </tr>
+                            </table>
+                            <tal:newsitem repeat="newsitem options/newsitems">
+
+                                    <table width="100%" cellpadding="20" cellspacing="0" border="0">
+                                        <tr>
+                                            <td bgcolor="#ffffff" class="contentblock">
+                                                <img tal:define="scales newsitem/@@images;thumbnail python: scales.scale('image', width=200, height=200);" tal:condition="thumbnail" tal:attributes="src thumbnail/url;width thumbnail/width;height thumbnail/height" style="margin: 0 0 20px 20px; border: solid 3px #FFF; box-shadow: 0 0 5px 4px #DEDEDE; -webkit-box-shadow: 0 0 5px 4px #DEDEDE; -khtml-box-shadow: 0 0 5px 4px #DEDEDE; -moz-box-shadow: 0 0 5px 4px #DEDEDE; float: right;" />
+                                                <h4 class="secondary"><strong><a style="color: #C54815; text-decoration: none;" href="http://yourdomain.com" tal:attributes="href newsitem/absolute_url" tal:content="newsitem/Title">First heading</a></strong></h4>
+                                                <div class="article">
+                                                    <p class="bodytext"
+                                                        tal:content="newsitem/Description">
+                                                        Pellentesque habitant morbi...
+                                                    </p>
+                                                    <p class="more"><a style="color: #C54815; text-decoration: none;" tal:attributes="href newsitem/absolute_url" href="http://yourdomain.com">Gehiago irakurri &rarr;</a></p>
+                                                </div>
+                                                <img border="0" src="http://www.bertsozale.eus/spacer3.gif" width="560" height="15" class="divider"/>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </tal:newsitem>
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+                                <tr>
+                                    <td bgcolor="#fff" nowrap="nowrap" width="25"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="20" height="20"></td>
+                                    <td width="180" align="center" height="30" style="color: #666; background:#e4e4e4; border-radius: 0 0 5px 5px; background-color: #e5e1e0; border-top: 1px solid #888" bgcolor="#fff" class="logocell"><a style="color: #C54815; text-decoration: none;" href="http://bdb.bertsozale.eus/web/agenda"><strong>Agenda</strong></a></td>
+                                    <td bgcolor="#fff" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="400" height="1"></td>
+                                </tr>
+                            </table>
+
+
+                            <table width="100%" cellpadding="20" cellspacing="0" border="0">
+                                <tal:events repeat="event options/events">
+                                    <tr>
+                                        <td bgcolor="#ffffff" class="contentblock agendaevent">
+                                            <h4 class="secondary"><strong><a style="color: #C54815; text-decoration: none;" href="http://yourdomain.com" tal:attributes="href event/link" tal:content="event/title">BBK sariketa: finalaurrekoa: Ipar Uribe vs. Bilboaldea</a></strong></h4>
+                                            <p tal:content="structure event/description"></p>
+
+                                            <img border="0" src="http://www.bertsozale.eus/spacer3.gif" width="560" height="15" class="divider"/>
+                                        </td>
+                                    </tr>
+                                </tal:events>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="20" class="divider"><br />
+
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#e4e4e4">
+                    <tr>
+                        <td>
+
+                            <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="30"><br />
+
+                            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="table">
+                                <tr>
+                                    <td width="600" nowrap bgcolor="#e4e4e4" class="cell">
+
+                                        <table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
+                                            <tr>
+                                                <td align="center" valign="top" class="footershow">
+
+                                                    <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="8"><br />
+
+                                                    <p style="color:#a6a6a6; font-size:13px; font-family:Helvetica,Arial,sans-serif; margin-top:0; margin-bottom:15px; padding-top:0; padding-bottom:0; line-height:18px;">Bertsozale Elkartea · Subijana Etxea · Kale Nagusia 70. 20150 Villabona<br />
+                                                        T. (00) (34) 943 69 41 29 / F. (00) (34) 943 69 30 41 / bertsozale[a bildua]bertsozale.eus
+                                                    </p>
+
+
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="25"><br />
+
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

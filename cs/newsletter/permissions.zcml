@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="cs.newsletter">
+
+    
+      <!-- -*- extra stuff goes here -*- -->
+       <permission
+          id="cs.newsletter.AddNewsletter"
+	  title="cs.newsletter: Add Newsletter"
+	  />       
+
+
+       <permission
+          id="cs.newsletter.AddNewsletterContainer"
+	  title="cs.newsletter: Add NewsletterContainer"
+	  />       
+
+
+
+</configure>
