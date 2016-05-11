@@ -79,15 +79,23 @@ class NewsletterPrepareView(grok.View):
         brains = catalog(portal_type='News Item',
                          review_state='published',
                          sort_on='effective',
-                         sort_order='reverse'
+                         sort_order='reverse',
+
                          )
         return IContentListing(brains)
 
     def get_events(self):
-        site = getSite()
-        adapted = IAnnotations(site).get('external_agenda', {})
-        data = adapted.get('general', [])
-        return reversed(sorted(data, lambda x, y: cmp(x['date'], y['date'])))
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        date_range_query = {'query': DateTime(),
+            'range': 'min'
+        }
+        brains = catalog(portal_type='Event',
+                         review_state='published',
+                         sort_on='start',
+                         end=date_range_query,
+                         )
+        return IContentListing(brains)
 
     def save(self):
         context = aq_inner(self.context)

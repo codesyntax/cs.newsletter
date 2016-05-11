@@ -26,9 +26,10 @@ setup(name='cs.newsletter',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # 'five.grok',
-          # 'plone.app.dexterity [grok, relations]',
-          # 'plone.namedfile [blobs]',
+          'five.grok',
+          'plone.app.dexterity [grok, relations]',
+          'plone.namedfile [blobs]',
+          'cs.htmlmailer'
           # -*- Extra requirements: -*-
       ],
       entry_points="""

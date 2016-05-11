@@ -3,7 +3,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="cs.donedukia">
+      i18n:domain="cs.newsletter">
 <head></head>
 <body>
 <metal:content-core fill-slot="content-core">
@@ -22,8 +22,6 @@
                 <th>#</th>
                 <th>Izenburua</th>
                 <th>Data</th>
-                <th>Lurraldeak</th>
-                <th>Proiektuak</th>
               </tr>
             </thead>
             <tbody tal:define="DateTime python:modules['DateTime'];
@@ -55,9 +53,6 @@
               <tr>
                 <th>#</th>
                 <th>Izenburua</th>
-                <!-- <th>Motiboa</th>
-                <th>Herria</th> -->
-
               </tr>
             </thead>
             <tbody>
@@ -72,16 +67,6 @@
                     Title
                   </a>
                 </td>
-                <!--<td>
-                    <span tal:replace="event/bertso_motiboa">
-                      Motiboa
-                    </span>
-                </td>
-                <td>
-                    <span tal:replace="event/bertso_location">
-                      Location
-                    </span>
-                </td>-->
               </tr>
             </tbody>
           </table>
