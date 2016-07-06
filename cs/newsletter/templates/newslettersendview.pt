@@ -25,9 +25,9 @@
       </div>
 
       <div class="control-group">
-        <label class="control-label" for="fr">Bidaltzailea</label>
+        <label class="control-label" for="from">Bidaltzailea</label>
         <div class="controls">
-          <input type="email" name="fr" id="fr" value="libargutxi@gmail.com" />
+          <input type="email" name="fr" id="from" value="libargutxi@gmail.com" />
         </div>
       </div>
 
