@@ -65,6 +65,7 @@ class NewsletterPrepareView(grok.View):
 
     html = u''
     _temp = ViewPageTemplateFile('templates/newsletter.pt')
+
     def update(self):
         self.request.set('disable_plone.rightcolumn', 1)
         if self.request.get('method', '') == 'POST':

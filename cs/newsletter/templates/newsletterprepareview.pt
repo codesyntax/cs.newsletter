@@ -59,10 +59,10 @@
               <tr tal:repeat="event view/get_events">
                 <td>
                   <input type="checkbox" name="events:list"
-                      tal:attributes="value event/link"/>
+                      tal:attributes="value event/getURL"/>
                 </td>
                 <td>
-                  <a href="" tal:attributes="href event/link"
+                  <a href="" tal:attributes="href event/getURL"
                     tal:content="event/title">
                     Title
                   </a>

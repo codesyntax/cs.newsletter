@@ -38,7 +38,7 @@
               class="input-xxlarge"
               size="50"
               tal:define="DateTime modules/DateTime"
-              tal:attributes="value python:'Mintzola Elkartearen Buletina - %s' % DateTime.DateTime().strftime('%Y-%m-%d')"
+              tal:attributes="value python:'Kulturaz Buletina - %s' % DateTime.DateTime().strftime('%Y-%m-%d')"
         />
         </div>
       </div>
