@@ -124,7 +124,7 @@ h4[class="secondary"] {
 
 
                             <a href="http://www.bertsozale.eus/">
-                                <img border="0" src="http://www.bertsozale.eus/logo2.png" label="Hero image" editable="true" width="600" height="150" id="screenshot">
+                                <img border="0" src="/@@site-logo/logoa.png" label="Hero image" editable="true" width="600" height="150" id="screenshot">
                             </a>
 
                             <table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
