@@ -47,7 +47,7 @@ grok.templatedir('templates')
 HTML_HEADER = '''<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Bertsozale elkartearen boletina</title>
+    <title>Newskampus</title>
     <style>
     body{
         font-family: Arial, Helvetica, sans-serif;
@@ -189,8 +189,8 @@ class NewsletterSendView(grok.View):
 
     def update(self):
         if self.request.get('method', '') == 'POST':
-            fr = self.request.get('from', 'libargutxi@gmail.com')
-            to = self.request.get('to', 'libargutxi@gmail.com')
+            fr = self.request.get('from', 'nruiz@codesyntax.com')
+            to = self.request.get('to', 'nruiz@codesyntax.com')
             cc = self.request.get('cc', [])
             subject = self.request.get('subject',
                 'Newsletter subject')

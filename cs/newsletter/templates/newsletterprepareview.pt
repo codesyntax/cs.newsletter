@@ -13,7 +13,7 @@
 
         <form action="" method="post"
           tal:attributes="action string:${context/absolute_url}/${view/__name__}">
-          <h2>Aukeratu boletinean txertatu beharreko albiste eta hitzorduak</h2>
+          <h2>Aukeratu Newskampus boletinean txertatu beharreko albiste eta hitzorduak</h2>
 
           <h3>Albisteak</h3>
           <table class="listing">
@@ -59,7 +59,7 @@
               <tr tal:repeat="event view/get_events">
                 <td>
                   <input type="checkbox" name="events:list"
-                      tal:attributes="value event/getURL"/>
+                      tal:attributes="value event/getId"/>
                 </td>
                 <td>
                   <a href="" tal:attributes="href event/getURL"

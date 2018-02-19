@@ -1,234 +1,563 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en"><head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Bertsozale elkartearen boletina</title>
-    <style>
-    body{
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    a:hover {
-        text-decoration: underline !important;
-    }
-    td.promocell p {
-        color:#e4e4e4;
-        font-size:16px;
-        line-height:26px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top:0;
-        margin-bottom:0;
-        padding-top:0;
-        padding-bottom:0px;
-        font-weight:normal;
-    }
-    td.contentblock h4 {
-        color:#C54815 !important;
-        font-size:16px;
-        line-height:24px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top:0;
-        margin-bottom:10px;
-        padding-top:0;
-        padding-bottom:0;
-        font-weight:normal;
-    }
-    td.contentblock h4 a {
-        color: #C54815;
-        text-decoration:none;
-    }
-    td.contentblock p {
-        color:#333;
-        font-size:14px;
-        line-height:19px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-top:0;
-        margin-bottom:12px;
-        padding-top:0;
-        padding-bottom:0;
-        font-weight:normal;
-    }
-    td.contentblock p a {
-        color:#C54815;
-        text-decoration:none;
-    }
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v=
+    "urn:schemas-microsoft-com:vml" xmlns:o=
+    "urn:schemas-microsoft-com:office:office">
+    <head>
+        <title>Newskampus</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content=
+            "width=device-width, initial-scale=1" />
+        <style type="text/css">
+            /*<![CDATA[*/
+                p{
+                        margin:10px 0;
+                        padding:0;
+                }
+                table{
+                        border-collapse:collapse;
+                }
+                h1,h2,h3,h4,h5,h6{
+                        display:block;
+                        margin:0;
+                        padding:0;
+                }
+                img,a img{
+                        border:0;
+                        height:auto;
+                        outline:none;
+                        text-decoration:none;
+                }
+                body,#bodyTable,#bodyCell{
+                        height:100%;
+                        margin:0;
+                        padding:0;
+                        width:100%;
+                }
+                .mcnPreviewText{
+                        display:none !important;
+                }
+                #outlook a{
+                        padding:0;
+                }
+                img{
+                        -ms-interpolation-mode:bicubic;
+                }
+                table{
+                        mso-table-lspace:0pt;
+                        mso-table-rspace:0pt;
+                }
+                .ReadMsgBody{
+                        width:100%;
+                }
+                .ExternalClass{
+                        width:100%;
+                }
+                p,a,li,td,blockquote{
+                        mso-line-height-rule:exactly;
+                }
+                a[href^=tel],a[href^=sms]{
+                        color:inherit;
+                        cursor:default;
+                        text-decoration:none;
+                }
+                p,a,li,td,body,table,blockquote{
+                        -ms-text-size-adjust:100%;
+                        -webkit-text-size-adjust:100%;
+                }
+                .ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.ExternalClass font{
+                        line-height:100%;
+                }
+                a[x-apple-data-detectors]{
+                        color:inherit !important;
+                        text-decoration:none !important;
+                        font-size:inherit !important;
+                        font-family:inherit !important;
+                        font-weight:inherit !important;
+                        line-height:inherit !important;
+                }
+                .templateContainer{
+                        max-width:600px !important;
+                }
+                a.mcnButton{
+                        display:block;
+                }
+                .mcnImage{
+                        vertical-align:bottom;
+                }
+                .mcnTextContent{
+                        word-break:break-word;
+                }
+                .mcnTextContent img{
+                        height:auto !important;
+                }
+                .mcnDividerBlock{
+                        table-layout:fixed !important;
+                }
+                h1{
+                        color:#222222;
+                        font-family:Helvetica;
+                        font-size:40px;
+                        font-style:normal;
+                        font-weight:bold;
+                        line-height:150%;
+                        letter-spacing:normal;
+                        text-align:center;
+                }
+                h2{
+                        color:#222222;
+                        font-family:Helvetica;
+                        font-size:34px;
+                        font-style:normal;
+                        font-weight:bold;
+                        line-height:150%;
+                        letter-spacing:normal;
+                        text-align:left;
+                }
+                h3{
+                        color:#444444;
+                        font-family:Helvetica;
+                        font-size:22px;
+                        font-style:normal;
+                        font-weight:bold;
+                        line-height:150%;
+                        letter-spacing:normal;
+                        text-align:center;
+                }
+                h4{
+                        color:#999999;
+                        font-family:Georgia;
+                        font-size:20px;
+                        font-style:italic;
+                        font-weight:normal;
+                        line-height:125%;
+                        letter-spacing:normal;
+                        text-align:left;
+                }
+                #templateHeader{
+                        background-color:#F7F7F7;
+                        background-image:url("https://gallery.mailchimp.com/05a62e3ef895d79a8db1a8376/images/585465a1-8756-4a0c-a30d-73bdcaa2f481.jpg");
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:54px;
+                        padding-bottom:54px;
+                }
+                .headerContainer{
+                        background-color:transparent;
+                        background-image:none;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:0;
+                        padding-bottom:0;
+                }
+                .headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+                        color:#808080;
+                        font-family:Helvetica;
+                        font-size:16px;
+                        line-height:150%;
+                        text-align:left;
+                }
+                .headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a{
+                        color:#00ADD8;
+                        font-weight:normal;
+                        text-decoration:underline;
+                }
+                #templateBody{
+                        background-color:#FFFFFF;
+                        background-image:none;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:27px;
+                        padding-bottom:54px;
+                }
+                .bodyContainer{
+                        background-color:transparent;
+                        background-image:none;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:0;
+                        padding-bottom:0;
+                }
+                .bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+                        color:#808080;
+                        font-family:Helvetica;
+                        font-size:16px;
+                        line-height:150%;
+                        text-align:left;
+                }
+                .bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a{
+                        color:#00ADD8;
+                        font-weight:normal;
+                        text-decoration:underline;
+                }
+                #templateFooter{
+                        background-color:#333333;
+                        background-image:none;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:45px;
+                        padding-bottom:63px;
+                }
+                .footerContainer{
+                        background-color:transparent;
+                        background-image:none;
+                        background-repeat:no-repeat;
+                        background-position:center;
+                        background-size:cover;
+                        border-top:0;
+                        border-bottom:0;
+                        padding-top:0;
+                        padding-bottom:0;
+                }
+                .footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+                        color:#FFFFFF;
+                        font-family:Helvetica;
+                        font-size:12px;
+                        line-height:150%;
+                        text-align:center;
+                }
+                .footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{
+                        color:#FFFFFF;
+                        font-weight:normal;
+                        text-decoration:underline;
+                }
+                @media only screen and (min-width:768px){
+                .templateContainer{
+                        width:600px !important;
+                }
 
-    p.more {
-        font-size: 11px !important;
-    }
+                }       @media only screen and (max-width: 480px){
+                body,table,td,p,a,li,blockquote{
+                        -webkit-text-size-adjust:none !important;
+                }
 
-    p.place{
-        text-transform: uppercase;
-        font-weight: bold !important;
-    }
+                }       @media only screen and (max-width: 480px){
+                body{
+                        width:100% !important;
+                        min-width:100% !important;
+                }
 
-    .agendaevent p, .agendaevent h4 {
-        margin:0 !important;
-    }
+                }       @media only screen and (max-width: 480px){
+                .mcnImage{
+                        width:100% !important;
+                }
 
-    @media only screen and (max-device-width: 480px) {
-       div[class="header"] {
-          font-size: 16px !important;
-      }
-      table[class="table"], td[class="cell"] {
-          width: 300px !important;
-      }
-      table[class="promotable"], td[class="promocell"] {
-          width: 325px !important;
-      }
-      td[class="footershow"] {
-          width: 300px !important;
-      }
-      table[class="hide"], img[class="hide"], td[class="hide"] {
-          display: none !important;
-      }
-      img[class="divider"] {
-          height: 1px !important;
-      }
-      td[class="logocell"] {
-        padding-top: 15px !important;
-        padding-left: 15px !important;
-        width: 300px !important;
-    }
-    img[id="screenshot"] {
-      width: 325px !important;
-      height: 127px !important;
-  }
-}
-img[class="galleryimage"] {
-  width: 53px !important;
-  height: 53px !important;
-}
-p[class="reminder"] {
-    font-size: 11px !important;
-}
+                }       @media only screen and (max-width: 480px){
+                .mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.mcnImageCardRightTextContentContainer{
+                        max-width:100% !important;
+                        width:100% !important;
+                }
 
+                }       @media only screen and (max-width: 480px){
+                .mcnBoxedTextContentContainer{
+                        min-width:100% !important;
+                }
 
-h4[class="secondary"] {
-    line-height: 22px !important;
-    margin-bottom: 5px !important;
-    font-size: 18px !important;
-}
-}
-</style>
-</head>
-<body topmargin="0" leftmargin="0" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#e4e4e4;-webkit-text-size-adjust:none;" bgcolor="#e4e4e4" marginheight="0" marginwidth="0">
+                }       @media only screen and (max-width: 480px){
+                .mcnImageGroupContent{
+                        padding:9px !important;
+                }
 
+                }       @media only screen and (max-width: 480px){
+                .mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOuter .mcnTextContent{
+                        padding-top:9px !important;
+                }
 
+                }       @media only screen and (max-width: 480px){
+                .mcnImageCardTopImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent{
+                        padding-top:18px !important;
+                }
 
-    <table bgcolor="#e4e4e4" border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tbody><tr>
-            <td bgcolor="#e4e4e4" width="100%">
+                }       @media only screen and (max-width: 480px){
+                .mcnImageCardBottomImageContent{
+                        padding-bottom:9px !important;
+                }
 
-                <table class="table" align="center" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="600">
-                    <tbody><tr>
-                        <td class="cell" width="600">
+                }       @media only screen and (max-width: 480px){
+                .mcnImageGroupBlockInner{
+                        padding-top:0 !important;
+                        padding-bottom:0 !important;
+                }
 
+                }       @media only screen and (max-width: 480px){
+                .mcnImageGroupBlockOuter{
+                        padding-top:9px !important;
+                        padding-bottom:9px !important;
+                }
 
-                            <a href="http://www.bertsozale.eus/">
-                                <img border="0" src="/@@site-logo/logoa.png" label="Hero image" editable="true" width="600" height="150" id="screenshot">
-                            </a>
+                }       @media only screen and (max-width: 480px){
+                .mcnTextContent,.mcnBoxedTextContentColumn{
+                        padding-right:18px !important;
+                        padding-left:18px !important;
+                }
 
-                            <table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
-                                <tr>
-                                    <td height="60" align="center" width="100%" class="hide" style="color:#a6a6a6;font-size:12px;font-family: Arial, Helvetica, sans-serif;text-shadow: 0 1px 0 #ffffff;" valign="top" bgcolor="#fff"><span>Bertsozale Elkartearen boletina</span><br /><strong><span style="text-transform:uppercase;" tal:content="options/date"> Data </span></strong>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
-                                <tr>
-                                    <td bgcolor="#fff" widht="25" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="20" height="20"></td>
-                                    <td style="color: #666; background:#e4e4e4; border-radius: 0 0 5px 5px; background-color: #e5e1e0; border-top: 1px solid #888" class="logocell" align="center" bgcolor="#fff" height="30" width="180">
-                                        <a href="http://www.bertsozale.eus/eu/albisteak" style="color: #C54815; text-decoration: none;"><strong>Albisteak</strong></a></td>
-                                    <td bgcolor="#fff" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="400" height="1"></td>
+                }       @media only screen and (max-width: 480px){
+                .mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+                        padding-right:18px !important;
+                        padding-bottom:0 !important;
+                        padding-left:18px !important;
+                }
 
-                                </tr>
-                            </table>
-                            <tal:newsitem repeat="newsitem options/newsitems">
+                }       @media only screen and (max-width: 480px){
+                .mcpreview-image-uploader{
+                        display:none !important;
+                        width:100% !important;
+                }
 
-                                    <table width="100%" cellpadding="20" cellspacing="0" border="0">
-                                        <tr>
-                                            <td bgcolor="#ffffff" class="contentblock">
-                                                <img tal:define="scales newsitem/@@images;thumbnail python: scales.scale('image', width=200, height=200);" tal:condition="thumbnail" tal:attributes="src thumbnail/url;width thumbnail/width;height thumbnail/height" style="margin: 0 0 20px 20px; border: solid 3px #FFF; box-shadow: 0 0 5px 4px #DEDEDE; -webkit-box-shadow: 0 0 5px 4px #DEDEDE; -khtml-box-shadow: 0 0 5px 4px #DEDEDE; -moz-box-shadow: 0 0 5px 4px #DEDEDE; float: right;" />
-                                                <h4 class="secondary"><strong><a style="color: #C54815; text-decoration: none;" href="http://yourdomain.com" tal:attributes="href newsitem/absolute_url" tal:content="newsitem/Title">First heading</a></strong></h4>
-                                                <div class="article">
-                                                    <p class="bodytext"
-                                                        tal:content="newsitem/Description">
-                                                        Pellentesque habitant morbi...
-                                                    </p>
-                                                    <p class="more"><a style="color: #C54815; text-decoration: none;" tal:attributes="href newsitem/absolute_url" href="http://yourdomain.com">Gehiago irakurri &rarr;</a></p>
-                                                </div>
-                                                <img border="0" src="http://www.bertsozale.eus/spacer3.gif" width="560" height="15" class="divider"/>
+                }       @media only screen and (max-width: 480px){
+                h1{
+                        font-size:30px !important;
+                        line-height:125% !important;
+                }
 
+                }       @media only screen and (max-width: 480px){
+                h2{
+                        font-size:26px !important;
+                        line-height:125% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                h3{
+                        font-size:20px !important;
+                        line-height:150% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                h4{
+                        font-size:18px !important;
+                        line-height:150% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                .mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentContainer .mcnTextContent p{
+                        font-size:14px !important;
+                        line-height:150% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                .headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{
+                        font-size:16px !important;
+                        line-height:150% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                .bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+                        font-size:16px !important;
+                        line-height:150% !important;
+                }
+
+                }       @media only screen and (max-width: 480px){
+                .footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
+                        font-size:14px !important;
+                        line-height:150% !important;
+                }
+
+                }
+                /*]]>*/
+        </style>
+        <style type="text/css">
+            /*<![CDATA[*/
+                @media only screen and (max-width: 480px){
+                    table#canspamBar td{font-size:14px !important;}
+                    table#canspamBar td a{display:block !important; margin-top:10px !important;}
+                }
+                /*]]>*/
+        </style>
+    </head>
+    <body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <center>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <tr>
+                                <td align="center" valign="top" id="templateHeader" data-template-container="" style="background:#F7F7F7 url(" no-repeat="">
+                                                <!--[if gte mso 9]>
+                                                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                                        <tr>
+                                                            <td align="center" valign="top" width="600" style="width:600px;">
+                                                <![endif]-->
+                                                <table class="templateContainer" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                                    <tr>
+                                                        <td valign="top" class="headerContainer" style="background:transparent none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: transparent;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;">
+                                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody class="mcnImageBlockOuter">
+                                                                    <tr>
+                                                                        <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                                                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                            <img class="mcnImage" align="center" alt="" src="https://gallery.mailchimp.com/05a62e3ef895d79a8db1a8376/images/c66124ef-1332-433c-9f85-9efb105b70b8.png" width="564" style="max-width: 1011px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!-- </tbody> -->
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if gte mso 9]>
                                             </td>
                                         </tr>
                                     </table>
-                            </tal:newsitem>
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
-                                <tr>
-                                    <td bgcolor="#fff" nowrap="nowrap" width="25"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="20" height="20"></td>
-                                    <td width="180" align="center" height="30" style="color: #666; background:#e4e4e4; border-radius: 0 0 5px 5px; background-color: #e5e1e0; border-top: 1px solid #888" bgcolor="#fff" class="logocell"><a style="color: #C54815; text-decoration: none;" href="http://bdb.bertsozale.eus/web/agenda"><strong>Agenda</strong></a></td>
-                                    <td bgcolor="#fff" nowrap="nowrap"><img border="0" src="http://www.bertsozale.eus/spacer.gif" width="400" height="1"></td>
-                                </tr>
-                            </table>
-
-
-                            <table width="100%" cellpadding="20" cellspacing="0" border="0">
-                                <tal:events repeat="event options/events">
-                                    <tr>
-                                        <td bgcolor="#ffffff" class="contentblock agendaevent">
-                                            <h4 class="secondary"><strong><a style="color: #C54815; text-decoration: none;" href="http://yourdomain.com" tal:attributes="href event/link" tal:content="event/title">BBK sariketa: finalaurrekoa: Ipar Uribe vs. Bilboaldea</a></strong></h4>
-                                            <p tal:content="structure event/description"></p>
-
-                                            <img border="0" src="http://www.bertsozale.eus/spacer3.gif" width="560" height="15" class="divider"/>
-                                        </td>
-                                    </tr>
-                                </tal:events>
-
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-
-
-                <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="20" class="divider"><br />
-
-                <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#e4e4e4">
-                    <tr>
-                        <td>
-
-                            <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="30"><br />
-
-                            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="table">
-                                <tr>
-                                    <td width="600" nowrap bgcolor="#e4e4e4" class="cell">
-
-                                        <table width="600" cellpadding="0" cellspacing="0" border="0" class="table">
-                                            <tr>
-                                                <td align="center" valign="top" class="footershow">
-
-                                                    <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="8"><br />
-
-                                                    <p style="color:#a6a6a6; font-size:13px; font-family:Helvetica,Arial,sans-serif; margin-top:0; margin-bottom:15px; padding-top:0; padding-bottom:0; line-height:18px;">Bertsozale Elkartea · Subijana Etxea · Kale Nagusia 70. 20150 Villabona<br />
-                                                        T. (00) (34) 943 69 41 29 / F. (00) (34) 943 69 30 41 / bertsozale[a bildua]bertsozale.eus
-                                                    </p>
-
-
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <img border="0" src="http://www.bertsozale.eus/spacer.gif" width="1" height="25"><br />
-
-                        </td>
-                    </tr>
-                </table>
-
-            </td>
-        </tr>
-    </table>
-
-</body>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top" id="templateBody" data-template-container="" style="background:#FFFFFF none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 27px;padding-bottom: 54px;">
+                                    <!--[if gte mso 9]>
+                                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                        <tr>
+                                            <td align="center" valign="top" width="600" style="width:600px;">
+                                                <![endif]-->
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                                    <tr>
+                                                        <td valign="top" class="bodyContainer" style="background:transparent none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: transparent;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;">
+                                                            <tal:newsitem repeat="newsitem options/newsitems">
+                                                                <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                    <tbody class="mcnImageBlockOuter">
+                                                                        <tr>
+                                                                            <td class="mcnImageBlockInner" valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <table class="mcnImageContentContainer" align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                <img  class="mcnImage" align="center" alt=""  style="max-width: 640px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                    tal:define="scales newsitem/@@images;thumbnail python: scales.scale('image', width=700, height=700);" tal:condition="thumbnail" tal:attributes="src thumbnail/url;width thumbnail/width;height thumbnail/height" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody class="mcnTextBlockOuter">
+                                                                    <tr>
+                                                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                            <!--[if mso]>
+                                                                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                                <tr>
+                                                                                    <![endif]-->
+                                                                                    <!--[if mso]>
+                                                                                    <td valign="top" width="600" style="width:600px;">
+                                                                                        <![endif]-->
+                                                                                        <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                                                        <h2 tal:content="newsitem/Title"></h2>
+                                                                                                        <p tal:replace="newsitem/Description"></p>
+                                                                                                        <div tal:content="structure newsitem/text/output|nothing">
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                        <!--[if mso]>
+                                                                                    </td>
+                                                                                    <![endif]-->
+                                                                                    <!--[if mso]>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <![endif]-->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            </tal:newsitem>
+                                                            <tal:event repeat="newsitem options/events">
+                                                                <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                    <tbody class="mcnImageBlockOuter">
+                                                                        <tr>
+                                                                            <td class="mcnImageBlockInner" valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <table class="mcnImageContentContainer" align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                                <img  class="mcnImage" align="center" alt=""  style="max-width: 640px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;"
+                                                                                                    tal:define="scales newsitem/@@images;thumbnail python: scales.scale('image', width=700, height=700);" tal:condition="thumbnail" tal:attributes="src thumbnail/url;width thumbnail/width;height thumbnail/height" />
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <table class="mcnTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody class="mcnTextBlockOuter">
+                                                                    <tr>
+                                                                        <td valign="top" class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                            <!--[if mso]>
+                                                                            <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                                                                <tr>
+                                                                                    <![endif]-->
+                                                                                    <!--[if mso]>
+                                                                                    <td valign="top" width="600" style="width:600px;">
+                                                                                        <![endif]-->
+                                                                                        <table class="mcnTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #808080;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
+                                                                                                        <h2 tal:content="newsitem/Title"></h2>
+                                                                                                        <p tal:replace="newsitem/Description"></p>
+                                                                                                        <div tal:content="structure newsitem/text/output|nothing">
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                        <!--[if mso]>
+                                                                                    </td>
+                                                                                    <![endif]-->
+                                                                                    <!--[if mso]>
+                                                                                </tr>
+                                                                            </table>
+                                                                            <![endif]-->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </tal:event>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if gte mso 9]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
 </html>

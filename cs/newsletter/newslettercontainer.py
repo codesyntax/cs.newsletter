@@ -108,13 +108,12 @@ class NewsletterPrepareView(grok.View):
                 newsitems.append(items[0].getObject())
         events = []
         site = getSite()
-        adapted = IAnnotations(site).get('external_agenda', {})
-        data = adapted.get('general', [])
-        for item in data:
-            if item['link'] in self.request.get('events', []):
-                events.append(item)
-
-        subject = u'Buletina {0}'.format(DateTime().strftime('%Y-%m-%d'))
+        for event in self.request.get('events', []):
+            items = catalog(id=event, portal_type='Event')
+            if items:
+                events.append(items[0].getObject())
+        subject = u'Newskampus {0}'.format(DateTime().strftime('%Y-%m-%d-%H%M%S'))
+        subject_title = u'Newskampus {0}'.format(DateTime().strftime('%Y-%m-%d'))
         date = DateTime().strftime('%Y-%m-%d')
         toLocalizedTime = context.restrictedTraverse('@@plone').toLocalizedTime
         html = self._temp(self.request,
@@ -126,7 +125,7 @@ class NewsletterPrepareView(grok.View):
 
         id = idnormalizer.normalize(subject)
         buletin = context.invokeFactory(id=id,
-                                        title=subject,
+                                        title=subject_title,
                                         type_name='Newsletter'
                     )
         buletin_object = context.get(buletin)
