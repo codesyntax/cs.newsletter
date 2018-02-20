@@ -54,7 +54,7 @@ class NewsletterContainerView(grok.View):
 
     def get_bulletins(self):
         context = aq_inner(self.context)
-        brains = context.getFolderContents(dict(portal_type='Bulletin'))
+        brains = context.getFolderContents(dict(portal_type='Newsletter'))
         return IContentListing(brains)
 
 
