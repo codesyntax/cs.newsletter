@@ -83,7 +83,7 @@ class NewsletterPrepareView(grok.View):
                          sort_order='reverse',
 
                          )
-        return IContentListing(brains)
+        return IContentListing(brains)[0:30]
 
     def get_events(self):
         context = aq_inner(self.context)
@@ -96,7 +96,7 @@ class NewsletterPrepareView(grok.View):
                          sort_on='start',
                          end=date_range_query,
                          )
-        return IContentListing(brains)
+        return IContentListing(brains)[0:30]
 
     def save(self):
         context = aq_inner(self.context)

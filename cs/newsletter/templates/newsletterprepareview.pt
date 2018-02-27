@@ -21,6 +21,7 @@
               <tr>
                 <th>#</th>
                 <th>Izenburua</th>
+                <th>Hizkuntza</th>
                 <th>Data</th>
               </tr>
             </thead>
@@ -31,9 +32,7 @@
                 <td>
                   <input type="checkbox"
                       name="newsitems:list"
-                      tal:attributes="value newsitem/getId;
-                                      checked python:(DateTime.DateTime() < DateTime.DateTime(newsitem.EffectiveDate()) + 7) and 'checked' or None
-                                  "/>
+                      tal:attributes="value newsitem/getId;"/>
                 </td>
                 <td>
                   <a href="" tal:attributes="href newsitem/getURL"
@@ -41,6 +40,7 @@
                     Izenburua
                   </a>
                 </td>
+                <td style="text-transform:uppercase;">${newsitem/Language}</td>
                 <td>
                   <span tal:replace="python:toLocalizedTime(newsitem.EffectiveDate())" />
                 </td>
@@ -48,11 +48,13 @@
             </tbody>
           </table>
           <h3>Hitzorduak</h3>
-          <table class="listing">
+          <table class="listing" tal:define="toLocalizedTime nocall:here/@@plone/toLocalizedTime">
             <thead>
               <tr>
                 <th>#</th>
+                <th>Noiz</th>
                 <th>Izenburua</th>
+                <th>Hizkuntza</th>
               </tr>
             </thead>
             <tbody>
@@ -61,12 +63,14 @@
                   <input type="checkbox" name="events:list"
                       tal:attributes="value event/getId"/>
                 </td>
+                <td><span tal:replace="python:toLocalizedTime(event.start)" /><br/><span tal:replace="python:toLocalizedTime(event.end)" /></td>
                 <td>
                   <a href="" tal:attributes="href event/getURL"
                     tal:content="event/title">
                     Title
                   </a>
                 </td>
+                <td style="text-transform:uppercase;">${event/Language}</td>
               </tr>
             </tbody>
           </table>
