@@ -235,7 +235,7 @@ class NewsletterPreview(grok.View):
         if context.image is None:
             return HTML_HEADER + context.text + HTML_FOOTER
         else:
-            image_code_pre = '''<td align="center" valign="top" id="templateHeader" data-template-container="" style="background:#F7F7F7 url(" no-repeat="">
+            image_code_pre = '''<tr><td align="center" valign="top" id="templateHeader" data-template-container="" style="background:#F7F7F7 url(" no-repeat="">
                             <!--[if gte mso 9]>
                                 <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
                                     <tr>
