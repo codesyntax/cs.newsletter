@@ -129,5 +129,6 @@ class NewsletterPrepareView(grok.View):
                                         type_name='Newsletter'
                     )
         buletin_object = context.get(buletin)
-        buletin_object.text = RichTextValue(html, 'text/html', 'text/html')
+        buletin_object.text = RichTextValue(html, 'text/html', 'text/html').raw
+        #buletin_object.text = RichTextValue(html, 'text/html', 'text/html')
         return buletin_object

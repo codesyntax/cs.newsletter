@@ -26,8 +26,7 @@
               </tr>
             </thead>
             <tbody tal:define="DateTime python:modules['DateTime'];
-                               toLocalizedTime nocall:here/@@plone/toLocalizedTime
-                      ">
+                               toLocalizedTime nocall:here/@@plone/toLocalizedTime">
               <tr tal:repeat="newsitem view/get_newsitems">
                 <td>
                   <input type="checkbox"

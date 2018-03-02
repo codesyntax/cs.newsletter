@@ -8,6 +8,7 @@ from Products.statusmessages.interfaces import IStatusMessage
 from cs.htmlmailer.mailer import create_html_mail
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
+from zope import schema
 
 
 # Interface class; used to define content-type schema.
@@ -20,7 +21,7 @@ class INewsletter(form.Schema, IImageScaleTraversable):
     # If you want a model-based interface, edit
     # models/newsletter.xml to define the content type
     # and add directives here as necessary.
-    text = RichText(title=_(u'Newsletter text'),
+    text = schema.SourceText(title=_(u'Newsletter text'),
         required=False,
         )
 
@@ -156,11 +157,63 @@ h4[class="secondary"] {
 }
 </style>
 </head>
-<body topmargin="0" leftmargin="0" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#e4e4e4;-webkit-text-size-adjust:none;" bgcolor="#e4e4e4" marginheight="0" marginwidth="0">
-
+    <body style="height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <center>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                <tr>
+                    <td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <tr>
+                                <td align="center" valign="top" id="templateHeader" data-template-container="" style="background:#F7F7F7 url(" no-repeat="">
+                                                <!--[if gte mso 9]>
+                                                    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                                        <tr>
+                                                            <td align="center" valign="top" width="600" style="width:600px;">
+                                                <![endif]-->
+                                                <table class="templateContainer" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                                    <tr>
+                                                        <td valign="top" class="headerContainer" style="background:transparent none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: transparent;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;">
+                                                            <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <tbody class="mcnImageBlockOuter">
+                                                                    <tr>
+                                                                        <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                                                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                            <img class="mcnImage" align="center" alt="" src="https://euskampus.eus/newskampus.png" width="564" style="max-width: 1011px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!-- </tbody> -->
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!--[if gte mso 9]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
 '''
 
-HTML_FOOTER = ''' </body></html> '''
+HTML_FOOTER = '''                         </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html> '''
+
 
 
 class NewsletterView(grok.View):
@@ -179,7 +232,48 @@ class NewsletterPreview(grok.View):
 
     def render(self):
         context = aq_inner(self.context)
-        return HTML_HEADER + context.text.output + HTML_FOOTER
+        if context.image is None:
+            return HTML_HEADER + context.text + HTML_FOOTER
+        else:
+            image_code_pre = '''<td align="center" valign="top" id="templateHeader" data-template-container="" style="background:#F7F7F7 url(" no-repeat="">
+                            <!--[if gte mso 9]>
+                                <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
+                                    <tr>
+                                        <td align="center" valign="top" width="600" style="width:600px;">
+                            <![endif]-->
+                            <table class="templateContainer" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                <tr>
+                                    <td valign="top" class="headerContainer" style="background:transparent none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: transparent;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;">
+                                        <table class="mcnImageBlock" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody class="mcnImageBlockOuter">
+                                                <tr>
+                                                    <td valign="top" style="padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnImageBlockInner">
+                                                        <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="mcnImageContent" valign="top" style="padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                        <img class="mcnImage" align="center" alt="" src="'''
+            image_code_post = '''" width="564" style="max-width: 1011px;padding-bottom: 0;display: inline !important;vertical-align: bottom;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
+        </td>
+    </tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- </tbody> -->
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<!--[if gte mso 9]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>'''
+            image_url = context.absolute_url() + '/@@images/image/'
+            return HTML_HEADER + image_code_pre + image_url + image_code_post + context.text + HTML_FOOTER
 
 
 class NewsletterSendView(grok.View):
@@ -199,7 +293,7 @@ class NewsletterSendView(grok.View):
     def send(self, fr, to, cc, subject):
         context = aq_inner(self.context)
 
-        data = HTML_HEADER + context.text.output + HTML_FOOTER
+        data = HTML_HEADER + context.text + HTML_FOOTER
         mail = create_html_mail(subject,
                          data.decode('utf-8'),
                          from_addr=fr,
