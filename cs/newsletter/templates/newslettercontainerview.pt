@@ -16,14 +16,14 @@
           <tal:buletin tal:repeat="buletin view/get_bulletins">
             <li>
               <a href=""
-                tal:attributes="href bulletin/getURL">
+                tal:attributes="href buletin/getURL">
 
                 <span class="title"
-                  tal:content="bulletin/Title">
+                  tal:content="buletin/Title">
                   Maiatza
                 </span>
                 <span class="date"
-                  tal:content="python:toLocalizedTime(bulletin.EffectiveDate)">
+                  tal:content="python:toLocalizedTime(buletin.EffectiveDate)">
                   2013/05/06
                 </span>
               </a>
