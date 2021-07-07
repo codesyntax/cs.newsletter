@@ -40,7 +40,7 @@ setup(name='cs.newsletter',
       # The next two lines may be deleted after you no longer need
       # addcontent support from paster and before you distribute
       # your package.
-      setup_requires=["PasteScript"],
-      paster_plugins = ["ZopeSkel"],
+      #setup_requires=["PasteScript"],
+      #paster_plugins = ["ZopeSkel"],
 
       )
