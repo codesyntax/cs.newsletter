@@ -2,8 +2,8 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="cs.newsletter">
 
@@ -13,8 +13,6 @@
   <include file="permissions.zcml" />
   <include package=".browser" />
 
-  <!-- Grok the package to initialise schema interfaces and content classes -->
-  <grok:grok package="." />
 
   <i18n:registerTranslations directory="locales" />
 
@@ -27,6 +25,46 @@
       description="Content-types for cs.newsletter. Newsletter creation product"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <browser:page
+      for=".newsletter.INewsletter"
+      name="view"
+      class=".newsletter.NewsletterView"
+      template="templates/newsletterview.pt"
+      permission="zope2.View"
+    />
+
+  <browser:page
+      for=".newsletter.INewsletter"
+      name="preview"
+      class=".newsletter.NewsletterPreview"
+      template="templates/newsletter.pt"
+      permission="zope2.View"
+    />
+
+  <browser:page
+      for=".newsletter.INewsletter"
+      name="send"
+      class=".newsletter.NewsletterSendView"
+      template="templates/newslettersendview.pt"
+      permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+      for=".newslettercontainer.INewsletterContainer"
+      name="view"
+      class=".newslettercontainer.NewsletterContainerView"
+      template="templates/newslettercontainerview.pt"
+      permission="zope2.View"
+    />
+
+  <browser:page
+      for=".newslettercontainer.INewsletterContainer"
+      name="prepare"
+      class=".newslettercontainer.NewsletterPrepareView"
+      template="templates/newsletterprepareview.pt"
+      permission="cmf.ManagePortal"
+    />
 
   <!-- -*- extra stuff goes here -*- -->
 

@@ -1,36 +1,41 @@
 from plone.app.textfield import RichText
-from five import grok
-from plone.directives import dexterity
-from plone.directives import form
+from plone.dexterity.content import Item
 from plone.namedfile.interfaces import IImageScaleTraversable
 from cs.newsletter import MessageFactory as _
 from Products.statusmessages.interfaces import IStatusMessage
 from cs.htmlmailer.mailer import create_html_mail
 from Acquisition import aq_inner
+from plone.supermodel import model
+from zope.interface import implementer
+from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 
 
 # Interface class; used to define content-type schema.
-class INewsletter(form.Schema, IImageScaleTraversable):
+class INewsletter(model.Schema, IImageScaleTraversable):
     """
     Newsletter
     """
+
     # If you want a schema-defined interface, delete the form.model
     # line below and delete the matching file in the models sub-directory.
     # If you want a model-based interface, edit
     # models/newsletter.xml to define the content type
     # and add directives here as necessary.
-    text = RichText(title=_(u'Newsletter text'),
+    text = RichText(
+        title=_(u"Newsletter text"),
         required=False,
-        )
+    )
+
 
 # Custom content-type class; objects created for this content type will
 # be instances of this class. Use this class to add content-type specific
 # methods and properties. Put methods that are mainly useful for rendering
 # in separate view classes.
-class Newsletter(dexterity.Item):
-    grok.implements(INewsletter)
+@implementer(INewsletter)
+class Newsletter(Item):
     # Add your class methods and properties here
+    pass
 
 
 # View class
@@ -42,9 +47,8 @@ class Newsletter(dexterity.Item):
 # using grok.name below.
 # This will make this view the default view for your content-type
 
-grok.templatedir('templates')
 
-HTML_HEADER = '''<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+HTML_HEADER = """<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Bertsozale elkartearen boletina</title>
@@ -158,55 +162,44 @@ h4[class="secondary"] {
 </head>
 <body topmargin="0" leftmargin="0" style="-webkit-font-smoothing: antialiased;width:100% !important;background:#e4e4e4;-webkit-text-size-adjust:none;" bgcolor="#e4e4e4" marginheight="0" marginwidth="0">
 
-'''
+"""
 
-HTML_FOOTER = ''' </body></html> '''
+HTML_FOOTER = """ </body></html> """
 
 
-class NewsletterView(grok.View):
-    grok.context(INewsletter)
-    grok.name('view')
-    grok.require('zope2.View')
-
+class NewsletterView(BrowserView):
     def update(self):
-        self.request.set('disable_plone.rightcolumn', 1)
+        self.request.set("disable_plone.rightcolumn", 1)
 
 
-class NewsletterPreview(grok.View):
-    grok.context(INewsletter)
-    grok.name('preview')
-    grok.require('zope2.View')
-
-    def render(self):
+class NewsletterPreview(BrowserView):
+    def __call__(self):
         context = aq_inner(self.context)
         return HTML_HEADER + context.text.output + HTML_FOOTER
 
 
-class NewsletterSendView(grok.View):
-    grok.context(INewsletter)
-    grok.name('send')
-    grok.require('cmf.ModifyPortalContent')
-
+class NewsletterSendView(BrowserView):
     def update(self):
-        if self.request.get('method', '') == 'POST':
-            fr = self.request.get('from', 'libargutxi@gmail.com')
-            to = self.request.get('to', 'libargutxi@gmail.com')
-            cc = self.request.get('cc', [])
-            subject = self.request.get('subject',
-                'Newsletter subject')
+        if self.request.get("method", "") == "POST":
+            fr = self.request.get("from", "libargutxi@gmail.com")
+            to = self.request.get("to", "libargutxi@gmail.com")
+            cc = self.request.get("cc", [])
+            subject = self.request.get("subject", "Newsletter subject")
             self.send(fr, to, cc, subject)
 
     def send(self, fr, to, cc, subject):
         context = aq_inner(self.context)
 
         data = HTML_HEADER + context.text.output + HTML_FOOTER
-        mail = create_html_mail(subject,
-                         data.decode('utf-8'),
-                         from_addr=fr,
-                         to_addr=to,
-                         cc_addrs=cc)
-        mailhost = getToolByName(context, 'MailHost')
+        mail = create_html_mail(
+            subject,
+            data.decode("utf-8"),
+            from_addr=fr,
+            to_addr=to,
+            cc_addrs=cc,
+        )
+        mailhost = getToolByName(context, "MailHost")
         mailhost.send(mail.as_string())
-        message = _('Bidalketa ondo egin da.')
+        message = _("Bidalketa ondo egin da.")
         IStatusMessage(self.request).add(message)
         return self.request.response.redirect(context.absolute_url())
