@@ -78,6 +78,7 @@ class NewsletterPrepareView(BrowserView):
             review_state="published",
             sort_on="effective",
             sort_order="reverse",
+            Language=context.Language(),
         )
         return IContentListing(brains)
 
@@ -90,6 +91,7 @@ class NewsletterPrepareView(BrowserView):
             review_state="published",
             sort_on="start",
             end=date_range_query,
+            Language=context.Language(),
         )
         return IContentListing(brains)
 
