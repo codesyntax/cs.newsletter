@@ -7,7 +7,7 @@
   <property name="title" i18n:translate="">NewsletterContainer</property>
   <property name="description"
     i18n:translate="">NewsletterContainer</property>
-  <property name="icon_expr">string:${portal_url}/folder_icon.png</property>
+  <property name="icon_expr">string:puzzle</property>
   <property name="factory">cs.newsletter.newslettercontainer</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>

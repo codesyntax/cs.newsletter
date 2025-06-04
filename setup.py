@@ -29,7 +29,7 @@ setup(
     install_requires=[
         "setuptools",
         "plone.app.dexterity [relations]",
-        "plone.namedfile [blobs]",
+        "plone.namedfile",
         "cs.htmlmailer"
         # -*- Extra requirements: -*-
     ],
