@@ -51,7 +51,8 @@ class NewsletterContainer(Container):
 class NewsletterContainerView(BrowserView):
     def get_bulletins(self):
         context = aq_inner(self.context)
-        brains = context.getFolderContents(dict(portal_type="Newsletter"))
+        # brains = context.getFolderContents(dict(portal_type="Newsletter"))
+        brains = []
         return IContentListing(brains)
 
 
