@@ -1,5 +1,4 @@
 from Acquisition import aq_inner
-from plone.app.contentlisting.interfaces import IContentListing
 from zope.annotation.interfaces import IAnnotations
 from DateTime import DateTime
 from zope.site.hooks import getSite
@@ -14,7 +13,7 @@ from plone.app.textfield.value import RichTextValue
 from plone.i18n.normalizer import idnormalizer
 from Products.Five.browser import BrowserView
 from zope.interface import implementer
-
+from plone import api
 # Interface class; used to define content-type schema.
 class INewsletterContainer(model.Schema):
     """
@@ -50,10 +49,7 @@ class NewsletterContainer(Container):
 
 class NewsletterContainerView(BrowserView):
     def get_bulletins(self):
-        context = aq_inner(self.context)
-        brains = context.getFolderContents(dict(portal_type="Newsletter"))
-        return IContentListing(brains)
-
+        return api.content.find(portal_type="Newsletter", context=self.context)
 
 class NewsletterPrepareView(BrowserView):
     html = u""
@@ -71,29 +67,24 @@ class NewsletterPrepareView(BrowserView):
             return self.request.response.redirect(bulletin.absolute_url())
 
     def get_newsitems(self):
-        context = aq_inner(self.context)
-        catalog = getToolByName(context, "portal_catalog")
-        brains = catalog(
-            portal_type="News Item",
+        navigation_root_obj = api.portal.get_navigation_root(self.context)
+        return api.content.find(portal_type="News Item",
             review_state="published",
             sort_on="effective",
             sort_order="reverse",
-            Language=context.Language(),
-        )
-        return IContentListing(brains)
+            context=navigation_root_obj)
 
     def get_events(self):
-        context = aq_inner(self.context)
-        catalog = getToolByName(context, "portal_catalog")
+        navigation_root_obj = api.portal.get_navigation_root(self.context)
         date_range_query = {"query": DateTime(), "range": "min"}
-        brains = catalog(
+        return api.content.find(
             portal_type="Event",
             review_state="published",
             sort_on="start",
             end=date_range_query,
-            Language=context.Language(),
+            context=navigation_root_obj,
         )
-        return IContentListing(brains)
+
 
     def save(self):
         context = aq_inner(self.context)
